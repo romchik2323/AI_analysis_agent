@@ -387,7 +387,7 @@ uvicorn api:app --reload --port 8000
 
 ---
 
-## 🛠️ Технологии
+##  Технологии
 
 ### Core Stack
 
@@ -669,15 +669,7 @@ def calculate_custom_metrics(y_true, y_pred, y_proba):
 - Error handling и fallback механизмы
 - Сериализация моделей (pickle)
 - Type hints и dataclasses
-##  Roadmap
 
-- [ ] SHAP values для объяснения предсказаний
-- [ ] Поддержка временных рядов (LSTM для sequence churn)
-- [ ] Web UI (Streamlit/Gradio)
-- [ ] A/B тест симулятор для retention стратегий
-- [ ] Интеграция с CRM системами (Salesforce, HubSpot)
-- [ ] Real-time scoring API (streaming predictions)
-- [ ] Multi-tenant поддержка (разные компании на одном сервере)
 
 
 
