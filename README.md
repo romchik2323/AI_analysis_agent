@@ -21,44 +21,7 @@
 Эта система решает все 4 задачи, работая как **AI-ассистент** для аналитиков и менеджеров.
 
 ---
-##  Что применено
 
-### Machine Learning
-- Feature engineering для табличных данных
-- Обработка несбалансированных классов (`class_weight='balanced'`)
-- Feature importance анализ
-- Cross-validation и метрики (ROC-AUC, Precision/Recall)
-
-### LLM & NLP
-- Работа с Anthropic API (функции, streaming)
-- Интеграция локальных моделей через Ollama
-- Prompt engineering для аналитических задач
-- Context window management (обрезка истории)
-
-### RAG (Retrieval-Augmented Generation)
-- Sentence embeddings (E5-large, 1024-dim)
-- Векторный поиск (cosine similarity)
-- Префиксы для E5 (`query:` vs `passage:`)
-- Гибридный поиск (semantic + metadata filters)
-
-### Backend Development
-- FastAPI асинхронные эндпоинты
-- Pydantic схемы валидации
-- REST API design (CRUD + поиск)
-- Background tasks для долгих операций
-
-### MCP (Model Context Protocol)
-- Реализация MCP сервера
-- Определение инструментов (tools)
-- stdio транспорт
-- Интеграция с Claude Desktop / Cursor
-
-### Software Engineering
-- Модульная архитектура (каждый компонент независим)
-- Dependency injection (провайдеры LLM)
-- Error handling и fallback механизмы
-- Сериализация моделей (pickle)
-- Type hints и dataclasses
 
 ##  Архитектура
 
@@ -668,7 +631,44 @@ def calculate_custom_metrics(y_true, y_pred, y_proba):
 5. **Объяснимость:** Feature importance показывает какие признаки важны, но не как именно они влияют (для этого нужен SHAP/LIME).
 
 ---
+##  Что применено
 
+### Machine Learning
+- Feature engineering для табличных данных
+- Обработка несбалансированных классов (`class_weight='balanced'`)
+- Feature importance анализ
+- Cross-validation и метрики (ROC-AUC, Precision/Recall)
+
+### LLM & NLP
+- Работа с Anthropic API (функции, streaming)
+- Интеграция локальных моделей через Ollama
+- Prompt engineering для аналитических задач
+
+
+### RAG (Retrieval-Augmented Generation)
+- Sentence embeddings (E5-large, 1024-dim)
+- Векторный поиск (cosine similarity)
+- Префиксы для E5 (`query:` vs `passage:`)
+- Гибридный поиск (semantic + metadata filters)
+
+### Backend Development
+- FastAPI асинхронные эндпоинты
+- Pydantic схемы валидации
+- REST API design (CRUD + поиск)
+- Background tasks для долгих операций
+
+### MCP (Model Context Protocol)
+- Реализация MCP сервера
+- Определение инструментов (tools)
+- stdio транспорт
+- Интеграция с Claude Desktop / Cursor
+
+### Software Engineering
+- Модульная архитектура (каждый компонент независим)
+- Dependency injection (провайдеры LLM)
+- Error handling и fallback механизмы
+- Сериализация моделей (pickle)
+- Type hints и dataclasses
 ##  Roadmap
 
 - [ ] SHAP values для объяснения предсказаний
